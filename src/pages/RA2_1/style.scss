@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.papa {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 10px;
+}
+.son {
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+}
