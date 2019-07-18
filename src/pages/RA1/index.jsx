@@ -10,16 +10,17 @@ class RA1 extends React.Component {
     };
     this.t0 = new Date();
   }
-  success1(x) {
-    console.log(x);
+  success1(x,y) {
     console.log("兔子跑完了，用时");
+    console.log(this);
+    console.log(x)
+    console.log(y)
     let r1 = new Date() - this.t0;
     this.setState({
       result1: r1
     });
   }
   success2(x) {
-    console.log('this');
     console.log(x);
     console.log("乌龟跑完了，用时");
     let r2 = new Date() - this.t0;
