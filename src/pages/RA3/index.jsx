@@ -53,6 +53,8 @@ class RA3 extends React.Component {
     this.state = {
       history: [
         {
+          x: 0,
+          y: 0,
           squares: Array(9).fill(null)
         }
       ],
@@ -68,15 +70,19 @@ class RA3 extends React.Component {
   }
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
-    const current = history[history.length -1];
+    const current = history[history.length - 1];
     const squares = current.squares.slice(0);
     if (caculatorWinner(squares) || squares[i]) {
       return;
     }
+
     squares[i] = this.state.xIsNext ? "X" : "O";
+
     this.setState({
       history: history.concat([
         {
+          x: history.length % 3 === 1 ? 1 : history.length % 3 === 2 ? 2 : 3,
+          y: Math.ceil(history.length / 3),
           squares: squares
         }
       ]),
@@ -91,9 +97,12 @@ class RA3 extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ? "Go to move #" + move : "Go to game start";
+
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button onClick={() => this.jumpTo(move)}>
+            {desc} 坐标：（{step.x}, {step.y}）
+          </button>
         </li>
       );
     });
@@ -138,7 +147,7 @@ function caculatorWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      return squares[a].val;
     }
   }
   return null;
