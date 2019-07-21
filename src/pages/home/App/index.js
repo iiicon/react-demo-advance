@@ -1,21 +1,38 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="master">
+          <ul>
+            <li>
+              <a href={`/RA1.html`}>龟兔赛跑</a>
+            </li>
+            <li>
+              <a href={`/RA2.html`}>eventHub&&单向数据流</a>
+            </li>
+            <li>
+              <a href={`/RA3.html`}>React官网项目棋盘</a>
+            </li>
+            <li>
+              <a href={`/RA4.html`}>input=file</a>
+            </li>
+            <li>
+              <a href={`/RA5_02.html`}>tab切换</a>
+            </li>
+            <li>
+              <a href={`/RA6.html`}>react-redux</a>
+            </li>
+            <li>
+              <a href={`/RA10.html`}>icon</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
