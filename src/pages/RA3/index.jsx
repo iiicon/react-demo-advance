@@ -97,11 +97,18 @@ class RA3 extends React.Component {
 
     const moves = history.map((step, move) => {
       const desc = move ? "Go to move #" + move : "Go to game start";
-
+      let DescLabel = () => {
+        if (current === step) {
+          return <strong>{desc}</strong>;
+        } else {
+          return <span>{desc}</span>;
+        }
+      };
       return (
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>
-            {desc} 坐标：（{step.x}, {step.y}）
+            <DescLabel />
+            坐标：（{step.x}, {step.y}）
           </button>
         </li>
       );
