@@ -11,14 +11,16 @@
 // }
 
 // function RA9() {
-//   const [ui, setUi] = useState(window.location.hash === '#signin' ? 0 : 1)
+//   const [ui, setUi] = useState(window.location.pathname === 'signin' ? 0 : 1)
 //   const handleSignin = () => {
 //     setUi(0)
-//     window.location.hash = 'signin'
+//     // window.location.hash = 'signin'
+//     window.history.pushState(null, '', 'signin')
 //   }
 //   const handleSignUp = () => {
 //     setUi(1)
-//     window.location.hash = 'signup'
+//     // window.location.hash = 'signup'
+//     window.history.pushState(null, '', 'signup')
 //   }
 //   return (
 //     <div>

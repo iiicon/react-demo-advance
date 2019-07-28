@@ -37,6 +37,9 @@ class App extends Component {
             <li>
               <a href={`/RA10.html`}>icon</a>
             </li>
+            <li>
+              <a href={`/RA11.html`}>react 生命周期</a>
+            </li>
           </ul>
         </div>
       </div>

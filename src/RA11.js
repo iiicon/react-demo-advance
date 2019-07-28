@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RA10 from 'pages/RA10';
+import RA11 from 'pages/RA11';
 
-ReactDOM.render(<RA10 />, document.getElementById('root'));
+ReactDOM.render(<RA11 />, document.getElementById('root'));
