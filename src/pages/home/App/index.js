@@ -26,6 +26,15 @@ class App extends Component {
               <a href={`/RA6.html`}>react-redux</a>
             </li>
             <li>
+              <a href={`/RA7.html`}>react-context</a>
+            </li>
+            <li>
+              <a href={`/RA8.html`}>react-hooks</a>
+            </li>
+            <li>
+              <a href={`/RA9.html`}>react-router</a>
+            </li>
+            <li>
               <a href={`/RA10.html`}>icon</a>
             </li>
           </ul>
